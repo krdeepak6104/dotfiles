@@ -4,7 +4,7 @@ Your dotfiles are how you personalize your system. These are mine.
 
 <br>
     <p align="center">
-    <img src="assets/arch-logo.svg" width="150" />
+    <img src="assets/Arch-Linux.svg" width="150" />
     </p>
 <br>
 
