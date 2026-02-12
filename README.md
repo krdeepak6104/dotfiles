@@ -2,6 +2,12 @@
 
 Your dotfiles are how you personalize your system. These are mine.
 
+<br>
+    <p align="center">
+    <img src="assets/arch-logo.svg" width="150" />
+    </p>
+<br>
+
 dotfiles for use in an Linux + Hyperland setup.
 
 This repository contains a minimal, portable layout for my home configuration — window manager, status bar, and helper scripts.
@@ -27,15 +33,41 @@ cd $HOME/dotfiles
 ```
 
 
-2. On a new Arch Linux + Hyprland machine (example flow)
+2. Backup existing /.config
 
 ```bash
-# make sure you understand any files before using it
-cd $HOME/dotfiles
-./scripts/install.sh   # (not included by default) bootstraps packages and links dotfiles
-# or use GNU Stow to symlink dotfiles (preferred explicit approach)
-stow -v -t $HOME hypr waybar shell
+# Backup ur existing /.config files
+mv ~/.config ~/.config.backup
 ```
+
+
+3. On a new Arch Linux + Hyprland machine (example flow)
+
+```bash
+# Create an new /.config file
+mkdir ~/.config
+# Copy /.config file from github to newly created ./config
+# Make sure u run this in clone repo inside dotfiles
+rsync -av --progress .config/ ~/.config/
+
+# Now u have two config files
+~/.config        ← new one
+~/.config.backup ← old one
+```
+```bash
+# File structer
+~/
+ ├── .config
+ ├── .config/.backup
+```
+
+4. After copying reload hyprland
+
+```bash
+# To RESTART Hyprland
+hyprctl reload
+```
+
 
 Notes about the Hyprland & Waybar setup
 
