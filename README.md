@@ -12,6 +12,13 @@ dotfiles for use in an Linux + Hyperland setup.
 
 This repository contains a minimal, portable layout for my home configuration — window manager, status bar, and helper scripts.
 
+Packages to Install
+- `hyprland`
+- `hyprpaper`
+- `kitty`
+- `waybar`
+- `wofi`
+
 Quick highlights
 - Purpose: provide consistent UI and shell configuration across Codespaces and local Arch installs.
 - Window manager: Hyprland (Wayland compositor) config in `./.config/hypr/hyprland.conf`.
@@ -22,6 +29,7 @@ Repository layout
 - `.config/hypr/hyprland.conf` — Hyprland configuration and keybindings.
 - `.config/waybar/config.jsonc` — Waybar configuration.
 - `.config/waybar/style.css` & `.config/waybar/mocha.css` — Theme and styling for Waybar.
+- `.config/wofi/style.css` — Style or CSS file for Wofi.
 
 Usage
 
